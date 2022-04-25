@@ -34,10 +34,10 @@ async def kakao(room: str, msg: str, sender: str, isGroupChat: bool, replier, im
     if command == "급식":
         print("".join(msg[1:]))
         result["code"] = ResponseCode.OK
-        result["msg"] = await meal.getMeal("".join(msg[1:]) if hasArg else None)
+        result["msg"] = await meal.getMeal("".join(msg[1:]) if hasArg else "오늘")
     if command == "시간표":
         result["code"] = ResponseCode.OK
-        result["msg"] = await timetable.getTimetable("".join(msg[1:]) if hasArg else None)
+        result["msg"] = await timetable.getTimetable("".join(msg[1:]) if hasArg else "전체")
 
     return result
 
