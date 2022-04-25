@@ -27,7 +27,6 @@ async def kakao(room: str, msg: str, sender: str, isGroupChat: bool, replier, im
     msg = msg.split(" ", 1)
     command = msg[0]
     hasArg = True if "".join(msg[1:]) != "" else False
-    print(hasArg)
     result = {
         "code": ResponseCode.CommandError,
         "msg": "알 수 없는 명령어 :(",
