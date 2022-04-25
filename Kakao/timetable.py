@@ -42,7 +42,8 @@ class Day(enum.IntEnum):
 
 
 async def getTimetable(when="week"):
-    with open(f'{os.path.dirname(os.path.abspath(__file__))}\\resources\\timetable.json', 'r', encoding='UTF-8') as f:
+    with open(f'{os.path.dirname(os.path.abspath(__file__))}{os.sep}resources{os.sep}timetable.json', 'r',
+              encoding='UTF-8') as f:
         table_json = json.loads(f.read())
 
     timetable = [["-"] * 5 for _ in range(7)]
