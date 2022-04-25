@@ -41,7 +41,7 @@ class Day(enum.IntEnum):
     Friday = 4
 
 
-async def getTimetable(when="week"):
+async def getTimetable(when):
     with open(f'{os.path.dirname(os.path.abspath(__file__))}{os.sep}resources{os.sep}timetable.json', 'r',
               encoding='UTF-8') as f:
         table_json = json.loads(f.read())
@@ -49,7 +49,17 @@ async def getTimetable(when="week"):
     timetable = [["-"] * 5 for _ in range(7)]
     table_week = table_json["week"]
 
-    if when == "week":
+    if when == "월":
+        msg = ""
+        table_monday = table_week[Day.Monday]["Monday"]
+
+        for subject in table_monday:
+            msg += "{0:^4}".format(subject["subject"])
+            msg += "\n"
+            msg += "{0:^4}".format('-')
+
+        return msg
+    else:
         for day in Day:
             table_day = table_week[day][day.name]
             for subject in table_day:
@@ -64,15 +74,4 @@ async def getTimetable(when="week"):
                                    preformat_cjk(period[4], 8))
             msg += "\n"
         print(msg)
-        return msg
-
-    if when == "월":
-        msg = ""
-        table_monday = table_week[Day.Monday]["Monday"]
-
-        for subject in table_monday:
-            msg += "{0:^4}".format(subject["subject"])
-            msg += "\n"
-            msg += "{0:^4}".format('-')
-
         return msg

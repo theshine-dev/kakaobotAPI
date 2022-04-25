@@ -26,6 +26,8 @@ class ResponseCode(enum.IntEnum):
 async def kakao(room: str, msg: str, sender: str, isGroupChat: bool, replier, imageDB: str, packageName: str):
     msg = msg.split(" ", 1)
     command = msg[0]
+    hasArg = True if "".join(msg[1:]) != "" else False
+    print(hasArg)
     result = {
         "code": ResponseCode.CommandError,
         "msg": "알 수 없는 명령어 :(",
@@ -33,10 +35,10 @@ async def kakao(room: str, msg: str, sender: str, isGroupChat: bool, replier, im
     if command == "급식":
         print("".join(msg[1:]))
         result["code"] = ResponseCode.OK
-        result["msg"] = await meal.getMeal("".join(msg[1:]))
+        result["msg"] = await meal.getMeal("".join(msg[1:]) if hasArg else None)
     if command == "시간표":
         result["code"] = ResponseCode.OK
-        result["msg"] = await timetable.getTimetable("".join(msg[1:]))
+        result["msg"] = await timetable.getTimetable("".join(msg[1:]) if hasArg else None)
 
     return result
 
