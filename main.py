@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 import enum
 
-from Kakao import meal
+from Kakao import meal, timetable
 
 app = FastAPI()
 
@@ -34,8 +34,10 @@ async def kakao(room: str, msg: str, sender: str, isGroupChat: bool, replier, im
         print("".join(msg[1:]))
         result["code"] = ResponseCode.OK
         result["msg"] = await meal.getMeal("".join(msg[1:]))
+    if command == "시간표":
+        result["code"] = ResponseCode.OK
+        result["msg"] = await timetable.getTimetable("".join(msg[1:]))
 
-    print(f'{room, msg, sender, isGroupChat, replier, imageDB, packageName}')
     return result
 
 # @app.get("/hello/{name}")

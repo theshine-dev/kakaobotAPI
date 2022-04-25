@@ -1,0 +1,156 @@
+{
+  "week": [
+    {
+      "Monday": [
+                {
+          "period": 1,
+          "subject": "사문"
+        },
+                {
+          "period": 2,
+          "subject": "확통"
+        },
+                {
+          "period": 3,
+          "subject": "화작B"
+        },
+                {
+          "period": 4,
+          "subject": "지리"
+        },
+                {
+          "period": 5,
+          "subject": "생윤"
+        },
+                {
+          "period": 6,
+          "subject": "확통"
+        },
+                {
+          "period": 7,
+          "subject": "자율"
+        }
+      ]
+    },
+        {
+      "Tuesday": [
+                {
+          "period": 1,
+          "subject": "화작A"
+        },
+                {
+          "period": 2,
+          "subject": "중문"
+        },
+                {
+          "period": 3,
+          "subject": "확통"
+        },
+                {
+          "period": 4,
+          "subject": "생윤"
+        },
+                {
+          "period": 5,
+          "subject": "영2B"
+        },
+                {
+          "period": 6,
+          "subject": "영2A"
+        },
+                {
+          "period": 7,
+          "subject": "지리"
+        }
+      ]
+    },
+        {
+      "Wednesday": [
+                {
+          "period": 1,
+          "subject": "고전"
+        },
+                {
+          "period": 2,
+          "subject": "영2A"
+        },
+                {
+          "period": 3,
+          "subject": "미창"
+        },
+                {
+          "period": 4,
+          "subject": "체탐"
+        },
+                {
+          "period": 5,
+          "subject": "화작B"
+        },
+                {
+          "period": 6,
+          "subject": "지리"
+        }
+      ]
+    },
+        {
+      "Thursday": [
+                {
+          "period": 1,
+          "subject": "고전"
+        },
+                {
+          "period": 2,
+          "subject": "사문"
+        },
+                {
+          "period": 3,
+          "subject": "생윤"
+        },
+                {
+          "period": 4,
+          "subject": "확통"
+        },
+                {
+          "period": 5,
+          "subject": "창체"
+        },
+                {
+          "period": 6,
+          "subject": "창체"
+        }
+      ]
+    },
+        {
+      "Friday": [
+                {
+          "period": 1,
+          "subject": "화작A"
+        },
+                {
+          "period": 2,
+          "subject": "논리"
+        },
+                {
+          "period": 3,
+          "subject": "화작B"
+        },
+                {
+          "period": 4,
+          "subject": "확통"
+        },
+                {
+          "period": 5,
+          "subject": "사문"
+        },
+                {
+          "period": 6,
+          "subject": "영2A"
+        },
+                {
+          "period": 7,
+          "subject": "고전"
+        }
+      ]
+    }
+  ]
+}
